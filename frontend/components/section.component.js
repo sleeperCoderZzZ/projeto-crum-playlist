@@ -11,20 +11,28 @@ class SectionDefault extends HTMLElement {
   render() {
     this.shadowRoot.innerHTML = `
       <style>
-        section {
-          padding: 20px;
-          margin: 5px 0;
+        :host {
+          display: block;
+          width: 100%;
         }
 
-        img {
+        section {
           width: 100%;
-          height: auto;
-          border-radius: 8px;
-          margin-bottom: 10px;
+          max-width: 60%;
+          margin: 5px auto;
+          padding: 20px;
+          box-sizing: border-box;
         }
+
+        @media (max-width: 480px) {
+          section {
+            max-width: 100%;
+            padding: 12px 0;
+          }
+        }
+
       </style>
       <section>
-        <img src="./assets/imgs/background-home-playlist.jpg" alt="Imagem da seção">
         <slot></slot>
       </section>
     `;

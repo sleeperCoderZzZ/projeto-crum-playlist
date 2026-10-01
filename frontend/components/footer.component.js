@@ -17,8 +17,12 @@ class FooterDefault extends HTMLElement {
           justify-content: center;
           align-items: center;
           padding: 10px 20px;
-          background-color: #074632;
-          color: #d3b868;
+          min-height: 56px;
+          background: rgba(7, 70, 50);
+          box-shadow: 0 -4px 18px rgba(16, 29, 22, 0.16);
+          color: #f4df9b;
+          font-family: 'Libre Caslon Condensed', serif;
+          backdrop-filter: blur(8px);
         }
         p {
           margin: 0;

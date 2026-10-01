@@ -1,26 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Playlist pessoal</title>
     <script rel="module" src="./components/button.component.js" defer> </script>
     <script rel="module" src="./components/main.component.js" defer> </script>
     <script rel="module" src="./components/header.component.js" defer> </script>
     <script rel="module" src="./components/footer.component.js" defer> </script>
     <script rel="module" src="./components/section.component.js" defer> </script>
     
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Condensed:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="./styles/reset.css">
 </head>
 <body>
     <header-default>
-        <h1 slot="title">Playlist pessoal</h1>
+        <h1 slot="title">Playlist Pessoal</h1>
         <div slot="actions"></div>
     </header-default>
     <main-default class="container-main">
         <section-default class="section-main">
-            <button-default>Entrar na playlist</button-default>
+            <button-default href="./playlist.html">Entrar na playlist</button-default>
         </section-default>
     </main-default>
     <footer-default>

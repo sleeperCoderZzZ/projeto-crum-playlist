@@ -1,0 +1,58 @@
+[
+  { "artista": "Liniker", "genero": "MPB", "titulo": "Zero" },
+  {
+    "artista": "Tim Maia",
+    "genero": "Soul",
+    "titulo": "Gostava Tanto de Você"
+  },
+  {
+    "artista": "Rita Lee",
+    "genero": "Rock brasileiro",
+    "titulo": "Mania de Você"
+  },
+  { "artista": "Emicida", "genero": "Rap", "titulo": "AmarElo" },
+  {
+    "artista": "Elis Regina",
+    "genero": "Bossa nova",
+    "titulo": "Como Nossos Pais"
+  },
+  { "artista": "Gilberto Gil", "genero": "Tropicalia", "titulo": "Palco" },
+  { "artista": "Céu", "genero": "Indie pop", "titulo": "Malemolência" },
+  { "artista": "BaianaSystem", "genero": "Axé", "titulo": "Miçanga" },
+  { "artista": "Djavan", "genero": "MPB", "titulo": "Oceano" },
+  {
+    "artista": "Nação Zumbi",
+    "genero": "Manguebeat",
+    "titulo": "Maracatu Atômico"
+  },
+  {
+    "artista": "Marisa Monte",
+    "genero": "Pop brasileiro",
+    "titulo": "Ainda Bem"
+  },
+  {
+    "artista": "Jorge Ben Jor",
+    "genero": "Samba-rock",
+    "titulo": "País Tropical"
+  },
+  {
+    "artista": "Criolo",
+    "genero": "Hip-hop",
+    "titulo": "Não Existe Amor em SP"
+  },
+  { "artista": "Gal Costa", "genero": "Tropicalia", "titulo": "Baby" },
+  { "artista": "Alceu Valença", "genero": "Frevo", "titulo": "Anunciação" },
+  {
+    "artista": "Luedji Luna",
+    "genero": "Neo soul",
+    "titulo": "Banho de Folhas"
+  },
+  {
+    "artista": "Legião Urbana",
+    "genero": "Rock brasileiro",
+    "titulo": "Tempo Perdido"
+  },
+  { "artista": "Anavitória", "genero": "Folk pop", "titulo": "Trevo" },
+  { "artista": "Cartola", "genero": "Samba", "titulo": "O Mundo é um Moinho" },
+  { "artista": "Pabllo Vittar", "genero": "Pop", "titulo": "K.O." }
+]

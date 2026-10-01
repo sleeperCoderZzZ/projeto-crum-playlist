@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minha playlist</title>
+  <link rel="stylesheet" href="./playlist.css">
+  <script src="./components/header.component.js" defer></script>
+  <script src="./components/footer.component.js" defer></script>
+  <script src="./components/main.component.js" defer></script>
+  <script src="./components/section.component.js" defer></script>
+  <script src="./components/button.component.js" defer></script>
+
+
+  <script src="./playlist.js" defer></script>
+</head>
+<body>
+  <header-default>
+    <h1 slot="title">Minha playlist</h1>
+    <a slot="actions" href="./home.html">Início</a>
+  </header-default>
+
+  <main-default class="container-main">
+    <section-default class="playlist-shell" aria-labelledby="playlist-title">
+      <form class="search-panel" id="search-form">
+        <label>
+          Artista
+          <input type="search" id="artist-search" placeholder="Ex.: Liniker" autocomplete="off">
+        </label>
+        <label>
+          Gênero
+          <input type="search" id="genre-search" placeholder="Ex.: MPB" autocomplete="off">
+        </label>
+        <label>
+          Título
+          <input type="search" id="title-search" placeholder="Ex.: Zero" autocomplete="off">
+        </label>
+        <button-default type="reset">Limpar busca</button-default>
+      </form>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Artista</th>
+              <th scope="col">Gênero</th>
+              <th scope="col">Título</th>
+            </tr>
+          </thead>
+          <tbody id="playlist-list"></tbody>
+        </table>
+        <p class="empty-state" id="empty-state" hidden>Nenhuma música encontrada com esses filtros.</p>
+      </div>
+    </section-default>
+  </main-default>
+
+  <footer-default>
+    <p>&copy; 2026 Playlist pessoal. Todos os direitos reservados.</p>
+  </footer-default>
+</body>
+</html>
