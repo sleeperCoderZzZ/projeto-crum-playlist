@@ -1,0 +1,23 @@
+/* Remove margens, preenchimentos e ajusta a borda */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Remove estilos de lista */
+ol, ul {
+  list-style: none;
+}
+
+/* Remove sublinhado de links e herda cor */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Garante que imagens respeitem o tamanho do container */
+img {
+  max-width: 100%;
+  display: block;
+}
