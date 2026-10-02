@@ -1,58 +1,83 @@
 [
-  { "artista": "Liniker", "genero": "MPB", "titulo": "Zero" },
+  {
+    "artista": "Linkin Park",
+    "genero": "Nu metal",
+    "titulo": "One More Light",
+    "pathImg": "./assets/imgs/linkin-park_one-more-light.jpg"
+  },
   {
     "artista": "Tim Maia",
     "genero": "Soul",
-    "titulo": "Gostava Tanto de Você"
+    "titulo": "Gostava Tanto de Você",
+    "pathImg": "./assets/imgs/tim-maia_gostava-tanto-de-voce.jpg"
   },
   {
     "artista": "Rita Lee",
     "genero": "Rock brasileiro",
-    "titulo": "Mania de Você"
+    "titulo": "Mania de Você",
+    "pathImg": "./assets/imgs/rita-lee_mania-de-voce.jpg"
   },
-  { "artista": "Emicida", "genero": "Rap", "titulo": "AmarElo" },
+  {
+    "artista": "Emicida",
+    "genero": "Rap",
+    "titulo": "AmarElo",
+    "pathImg": "./assets/imgs/emicida_amarelo.jpg"
+  },
   {
     "artista": "Elis Regina",
     "genero": "Bossa nova",
-    "titulo": "Como Nossos Pais"
+    "titulo": "Como Nossos Pais",
+    "pathImg": "./assets/imgs/elis-regina_como-nossos-pais.jpg"
   },
-  { "artista": "Gilberto Gil", "genero": "Tropicalia", "titulo": "Palco" },
-  { "artista": "Céu", "genero": "Indie pop", "titulo": "Malemolência" },
-  { "artista": "BaianaSystem", "genero": "Axé", "titulo": "Miçanga" },
-  { "artista": "Djavan", "genero": "MPB", "titulo": "Oceano" },
+  { "artista": "Gilberto Gil", "genero": "Tropicalia", "titulo": "Palco", "pathImg": "./assets/imgs/gilberto-gil_palco.jpg" },
+  { "artista": "Céu", "genero": "Indie pop", "titulo": "Malemolência", "pathImg": "./assets/imgs/ceu_malemolencia.jpg" },
+  { "artista": "BaianaSystem", "genero": "Axé", "titulo": "Miçanga", "pathImg": "./assets/imgs/baianasystem_micanga.jpg" },
+  { "artista": "Djavan", "genero": "MPB", "titulo": "Oceano", "pathImg": "./assets/imgs/djavan_oceano.jpg" },
   {
     "artista": "Nação Zumbi",
     "genero": "Manguebeat",
-    "titulo": "Maracatu Atômico"
+    "titulo": "Maracatu Atômico",
+    "pathImg": "./assets/imgs/nacao-zumbi_maracatu-atomico.jpg"
   },
   {
     "artista": "Marisa Monte",
     "genero": "Pop brasileiro",
-    "titulo": "Ainda Bem"
+    "titulo": "Ainda Bem",
+    "pathImg": "./assets/imgs/marisa-monte_ainda-bem.jpg"
   },
   {
     "artista": "Jorge Ben Jor",
     "genero": "Samba-rock",
-    "titulo": "País Tropical"
+    "titulo": "País Tropical",
+    "pathImg": "./assets/imgs/jorge-ben-jor_pais-tropical.jpg"
   },
   {
     "artista": "Criolo",
     "genero": "Hip-hop",
-    "titulo": "Não Existe Amor em SP"
+    "titulo": "Não Existe Amor em SP",
+    "pathImg": "./assets/imgs/criolo_nao-existe-amor-em-sp.jpg"
   },
-  { "artista": "Gal Costa", "genero": "Tropicalia", "titulo": "Baby" },
-  { "artista": "Alceu Valença", "genero": "Frevo", "titulo": "Anunciação" },
+  { "artista": "Gal Costa", "genero": "Tropicalia", "titulo": "Baby", "pathImg": "./assets/imgs/gal-costa_baby.jpg" },
+  { "artista": "Alceu Valença", "genero": "Frevo", "titulo": "Anunciação", "pathImg": "./assets/imgs/alceu-valenca_anunciacao.jpg" },
   {
     "artista": "Luedji Luna",
     "genero": "Neo soul",
-    "titulo": "Banho de Folhas"
+    "titulo": "Banho de Folhas",
+    "pathImg": "./assets/imgs/luedji-luna_banho-de-folhas.jpg"
   },
   {
     "artista": "Legião Urbana",
     "genero": "Rock brasileiro",
-    "titulo": "Tempo Perdido"
+    "titulo": "Tempo Perdido",
+    "pathImg": "./assets/imgs/legiao-urbana_tempo-perdido.jpg"
   },
-  { "artista": "Anavitória", "genero": "Folk pop", "titulo": "Trevo" },
-  { "artista": "Cartola", "genero": "Samba", "titulo": "O Mundo é um Moinho" },
-  { "artista": "Pabllo Vittar", "genero": "Pop", "titulo": "K.O." }
+  { "artista": "Anavitória", "genero": "Folk pop", "titulo": "Trevo", "pathImg": "./assets/imgs/anavitoria_trevo.jpg" },
+  { "artista": "Chico Buarque", "genero": "MPB", "titulo": "A Banda", "pathImg": "./assets/imgs/chico-buarque-a-banda.jpeg" },
+  { "artista": "Cartola", "genero": "Samba", "titulo": "O Mundo é um Moinho", "pathImg": "./assets/imgs/cartola_o-mundo-e-um-moinho.jpg" },
+  {
+    "artista": "Roupa Nova",
+    "genero": "Punk",
+    "titulo": "Velho Punk",
+    "pathImg": "./assets/imgs/roupa-nova_velho-punk.jpg"
+  }
 ]
