@@ -1,11 +1,11 @@
-const listElement = document.querySelector('#playlist-list');
-const emptyState = document.querySelector('#empty-state');
-const resultCount = document.querySelector('#result-count');
-const searchForm = document.querySelector('#search-form');
-const searchFields = {
-  artista: document.querySelector('#artist-search'),
-  genero: document.querySelector('#genre-search'),
-  titulo: document.querySelector('#title-search')
+const listaMusica = document.querySelector('#lista-playlist');
+const estadoVazio = document.querySelector('#estado-vazio');
+const resultadoContagem = document.querySelector('#resultado-contagem');
+const pesquisa = document.querySelector('#busca');
+const camposPesquisa = {
+  artista: document.querySelector('#busca-artista'),
+  genero: document.querySelector('#busca-genero'),
+  titulo: document.querySelector('#busca-titulo')
 };
 
 let musicas = [];
@@ -17,40 +17,40 @@ function normalize(value) {
     .toLowerCase();
 }
 
-function renderSongs(songs) {
-  listElement.innerHTML = songs.map((song) => `
+function renderizarMusicas(musicas) {
+  listaMusica.innerHTML = musicas.map((musica) => `
     <tr>
-      <td><img src="${song.pathImg}" alt="${song.titulo}" width="50" height="50"></td>
-      <td>${song.artista}</td>
-      <td>${song.genero}</td>
-      <td>${song.titulo}</td>
+      <td><img src="${musica.pathImg}" alt="${musica.titulo}" width="50" height="50"></td>
+      <td>${musica.artista}</td>
+      <td>${musica.genero}</td>
+      <td>${musica.titulo}</td>
     </tr>
   `).join('');
 
-  if (emptyState) {
-    emptyState.hidden = songs.length > 0;
+  if (estadoVazio) {
+    estadoVazio.hidden = musicas.length > 0;
   }
 
-  if (resultCount) {
-    resultCount.textContent = `${songs.length} ${songs.length === 1 ? 'faixa' : 'faixas'}`;
+  if (resultadoContagem) {
+    resultadoContagem.textContent = `${musicas.length} ${musicas.length === 1 ? 'faixa' : 'faixas'}`;
   }
 }
 
-function filterSongs() {
-  const filters = Object.fromEntries(
-    Object.entries(searchFields).map(([field, input]) => [field, normalize(input.value.trim())])
+function filtrarMusica() {
+  const filtros = Object.fromEntries(
+    Object.entries(camposPesquisa).map(([field, input]) => [field, normalize(input.value.trim())])
   );
 
-  const filteredSongs = musicas.filter((song) => (
-    Object.entries(filters).every(([field, value]) => (
-      !value || normalize(song[field]).includes(value)
+  const musicasFiltradas = musicas.filter((musica) => (
+    Object.entries(filtros).every(([field, value]) => (
+      !value || normalize(musica[field]).includes(value)
     ))
   ));
 
-  renderSongs(filteredSongs);
+  renderizarMusicas(musicasFiltradas  );
 }
 
-async function loadSongs() {
+async function carregarMusicas() {
   try {
     const musicsResponse = await fetch('./data/musicas.json');
     if (!musicsResponse.ok) {
@@ -58,31 +58,31 @@ async function loadSongs() {
     }
 
     musicas = await musicsResponse.json();
-    renderSongs(musicas);
+    renderizarMusicas(musicas);
   } catch (error) {
-    if (resultCount) {
-      resultCount.textContent = 'Erro ao carregar';
+    if (resultadoContagem) {
+      resultadoContagem.textContent = 'Erro ao carregar';
     }
 
-    if (emptyState) {
-      emptyState.hidden = false;
-      emptyState.textContent = 'Não foi possível carregar a playlist agora.';
+    if (estadoVazio) {
+      estadoVazio.hidden = false;
+      estadoVazio.textContent = 'Não foi possível carregar a playlist agora.';
     }
   }
 }
 
-Object.values(searchFields).forEach((input) => {
-  input.addEventListener('input', filterSongs);
+Object.values(camposPesquisa).forEach((input) => {
+  input.addEventListener('input', filtrarMusica);
 });
 
-searchForm.addEventListener('reset', () => {
-  window.setTimeout(filterSongs);
+pesquisa.addEventListener('reset', () => {
+  window.setTimeout(filtrarMusica);
 });
 
 document.querySelector('button-default[type="reset"]').addEventListener('click', (event) => {
   event.preventDefault();
-  searchForm.reset();
-  filterSongs();
+  pesquisa.reset();
+  filtrarMusica();
 });
 
-loadSongs();
+carregarMusicas();

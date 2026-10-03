@@ -22,35 +22,35 @@
 
   <main-default class="container-main">
     <section-default class="playlist-shell" aria-labelledby="playlist-title">
-      <form class="search-panel" id="search-form">
+      <form class="painel-de-busca" id="busca" aria-label="Filtros de busca">
         <label>
           Artista
-          <input type="search" id="artist-search" placeholder="Ex.: Liniker" autocomplete="off">
+          <input type="search" id="busca-artista" placeholder="Ex.: Liniker" autocomplete="off">
         </label>
         <label>
           Gênero
-          <input type="search" id="genre-search" placeholder="Ex.: MPB" autocomplete="off">
+          <input type="search" id="busca-genero" placeholder="Ex.: MPB" autocomplete="off">
         </label>
         <label>
           Título
-          <input type="search" id="title-search" placeholder="Ex.: Zero" autocomplete="off">
+          <input type="search" id="busca-titulo" placeholder="Ex.: Zero" autocomplete="off">
         </label>
         <button-default type="reset">Limpar busca</button-default>
       </form>
-
+      <p class="resultado-contagem" id="resultado-contagem">0 músicas encontradas</p>
       <div class="table-wrapper">
         <table>
           <thead>
             <tr>
-              <th scope="col">Album</th>
+              <th scope="col">Álbum</th>
               <th scope="col">Artista</th>
               <th scope="col">Gênero</th>
               <th scope="col">Título</th>
             </tr>
           </thead>
-          <tbody id="playlist-list"></tbody>
+          <tbody id="lista-playlist"></tbody>
         </table>
-        <p class="empty-state" id="empty-state" hidden>Nenhuma música encontrada com esses filtros.</p>
+        <p class="estado-vazio" id="estado-vazio" hidden>Nenhuma música encontrada com esses filtros.</p>
       </div>
     </section-default>
   </main-default>
