@@ -20,7 +20,7 @@ function normalize(value) {
 function renderizarMusicas(musicas) {
   listaMusica.innerHTML = musicas.map((musica) => `
     <tr>
-      <td><img src="${musica.pathImg}" alt="${musica.titulo}" width="50" height="50"></td>
+      <td><img src="${new URL(musica.pathImg, new URL('../', document.baseURI))}" alt="${musica.titulo}" width="50" height="50"></td>
       <td>${musica.artista}</td>
       <td>${musica.genero}</td>
       <td>${musica.titulo}</td>
@@ -52,7 +52,7 @@ function filtrarMusica() {
 
 async function carregarMusicas() {
   try {
-    const musicsResponse = await fetch('./data/musicas.json');
+    const musicsResponse = await fetch('../data/musicas.json');
     if (!musicsResponse.ok) {
       throw new Error('Não foi possível carregar as músicas.');
     }

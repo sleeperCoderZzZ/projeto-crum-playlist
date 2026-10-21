@@ -9,6 +9,8 @@ class MainDefault extends HTMLElement {
   } 
 
   render() {
+    const assetPath = window.location.pathname.includes('/pages/') ? '../assets' : './assets';
+
     this.shadowRoot.innerHTML = `
       <style>
         :host {
@@ -25,7 +27,7 @@ class MainDefault extends HTMLElement {
           width: 100%;
           padding: 32px 20px;
           box-sizing: border-box;
-          background: linear-gradient(rgba(18, 31, 24, 0.44), rgba(18, 31, 24, 0.54)), url('./assets/imgs/background-home-playlist.jpg') center / cover no-repeat;
+          background: linear-gradient(rgba(18, 31, 24, 0.44), rgba(18, 31, 24, 0.54)), url('${assetPath}/imgs/background-home-playlist.jpg') center / cover no-repeat;
         }
       </style>
       <main>
